@@ -1,0 +1,646 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>CognitivePip – Trade. Learn. Grow. | Forex Education South Africa</title>
+<meta name="description" content="CognitivePip is a structured forex education and trading community in South Africa. Learn forex from beginner to advanced. Join VIP signals, Educational Hub or our full bundle. Trade. Learn. Grow.">
+<meta name="keywords" content="forex education South Africa, forex signals South Africa, learn forex SA, SMC trading, ICT trading, forex courses South Africa, CognitivePip">
+<meta name="author" content="CognitivePip">
+<meta property="og:title" content="CognitivePip – Trade. Learn. Grow.">
+<meta property="og:description" content="Structured forex education and trading community. VIP signals, Educational Hub and full courses. South Africa.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://cognitivepip.co.za">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="CognitivePip – Trade. Learn. Grow.">
+<meta name="twitter:description" content="Structured forex education South Africa. VIP signals, Hub and courses.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;600;700&family=Bebas+Neue&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  :root {
+    --gold: #C9A84C; --gold-light: #E8C96A; --gold-dark: #8B6914;
+    --gold-glow: rgba(201,168,76,0.15); --black: #080808; --dark: #0E0E0E;
+    --dark-2: #141414; --dark-3: #1C1C1C; --dark-4: #242424;
+    --white: #F5F0E8; --white-dim: rgba(245,240,232,0.6);
+    --white-faint: rgba(245,240,232,0.08); --border: rgba(201,168,76,0.2);
+  }
+  html { scroll-behavior: smooth; }
+  body { font-family: 'DM Sans', sans-serif; background: var(--black); color: var(--white); overflow-x: hidden; }
+  body::before {
+    content: ''; position: fixed; inset: 0;
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.04'/%3E%3C/svg%3E");
+    pointer-events: none; z-index: 999; opacity: 0.4;
+  }
+
+  /* NAV */
+  nav { position: fixed; top: 0; left: 0; right: 0; z-index: 100; display: flex; align-items: center; justify-content: space-between; padding: 20px 60px; background: rgba(8,8,8,0.9); backdrop-filter: blur(20px); border-bottom: 1px solid var(--border); transition: padding 0.3s; }
+  .nav-logo { font-family: 'Bebas Neue', sans-serif; font-size: 26px; letter-spacing: 3px; color: var(--white); text-decoration: none; }
+  .nav-logo span { color: var(--gold); }
+  .nav-links { display: flex; gap: 36px; list-style: none; }
+  .nav-links a { color: var(--white-dim); text-decoration: none; font-size: 13px; letter-spacing: 1px; text-transform: uppercase; font-weight: 500; transition: color 0.2s; }
+  .nav-links a:hover { color: var(--gold); }
+  .nav-cta { background: var(--gold) !important; color: var(--black) !important; padding: 10px 22px !important; border-radius: 2px; font-weight: 600 !important; }
+  .nav-cta:hover { background: var(--gold-light) !important; }
+  .menu-toggle { display: none; flex-direction: column; gap: 5px; cursor: pointer; }
+  .menu-toggle span { display: block; width: 24px; height: 1.5px; background: var(--white); transition: all 0.3s; }
+
+  /* HERO */
+  #hero { min-height: 100vh; display: flex; align-items: center; justify-content: center; position: relative; overflow: hidden; padding: 120px 60px 80px; }
+  .hero-grid { position: absolute; inset: 0; background-image: linear-gradient(rgba(201,168,76,0.04) 1px, transparent 1px), linear-gradient(90deg, rgba(201,168,76,0.04) 1px, transparent 1px); background-size: 60px 60px; }
+  .hero-glow { position: absolute; width: 800px; height: 800px; border-radius: 50%; background: radial-gradient(circle, rgba(201,168,76,0.08) 0%, transparent 70%); top: 50%; left: 50%; transform: translate(-50%, -50%); pointer-events: none; }
+  .hero-content { position: relative; text-align: center; max-width: 900px; }
+  .hero-badge { display: inline-block; border: 1px solid var(--border); padding: 8px 20px; font-size: 11px; letter-spacing: 3px; text-transform: uppercase; color: var(--gold); margin-bottom: 40px; font-weight: 500; animation: fadeUp 0.8s ease both; }
+  .hero-title { font-family: 'Bebas Neue', sans-serif; font-size: clamp(72px, 10vw, 140px); line-height: 0.9; letter-spacing: 4px; margin-bottom: 30px; animation: fadeUp 0.8s ease 0.1s both; }
+  .hero-title .gold { color: var(--gold); }
+  .hero-tagline { font-family: 'Cormorant Garamond', serif; font-size: clamp(16px, 2vw, 22px); font-weight: 300; color: var(--white-dim); letter-spacing: 6px; text-transform: uppercase; margin-bottom: 20px; animation: fadeUp 0.8s ease 0.2s both; }
+  .hero-sub { font-size: 15px; color: var(--white-dim); max-width: 560px; margin: 0 auto 50px; line-height: 1.8; font-weight: 300; animation: fadeUp 0.8s ease 0.3s both; }
+  .hero-buttons { display: flex; gap: 16px; justify-content: center; flex-wrap: wrap; animation: fadeUp 0.8s ease 0.4s both; }
+  .btn-primary { background: var(--gold); color: var(--black); padding: 16px 36px; font-size: 13px; letter-spacing: 2px; text-transform: uppercase; font-weight: 600; text-decoration: none; border-radius: 2px; transition: all 0.2s; font-family: 'DM Sans', sans-serif; }
+  .btn-primary:hover { background: var(--gold-light); transform: translateY(-2px); box-shadow: 0 8px 30px rgba(201,168,76,0.3); }
+  .btn-outline { border: 1px solid var(--border); color: var(--white); padding: 16px 36px; font-size: 13px; letter-spacing: 2px; text-transform: uppercase; font-weight: 500; text-decoration: none; border-radius: 2px; transition: all 0.2s; }
+  .btn-outline:hover { border-color: var(--gold); color: var(--gold); transform: translateY(-2px); }
+  .hero-stats { display: flex; gap: 60px; justify-content: center; margin-top: 80px; padding-top: 60px; border-top: 1px solid var(--border); animation: fadeUp 0.8s ease 0.5s both; flex-wrap: wrap; }
+  .stat { text-align: center; }
+  .stat-num { font-family: 'Bebas Neue', sans-serif; font-size: 48px; color: var(--gold); line-height: 1; letter-spacing: 2px; }
+  .stat-label { font-size: 11px; letter-spacing: 2px; text-transform: uppercase; color: var(--white-dim); margin-top: 6px; font-weight: 500; }
+
+  /* SECTIONS */
+  section { padding: 120px 60px; }
+  .section-label { font-size: 11px; letter-spacing: 4px; text-transform: uppercase; color: var(--gold); font-weight: 500; margin-bottom: 16px; }
+  .section-title { font-family: 'Bebas Neue', sans-serif; font-size: clamp(42px, 5vw, 72px); letter-spacing: 3px; line-height: 1; margin-bottom: 20px; }
+  .section-sub { font-size: 15px; color: var(--white-dim); max-width: 500px; line-height: 1.8; font-weight: 300; }
+
+  /* ABOUT */
+  #about { background: var(--dark); }
+  .about-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 80px; align-items: center; max-width: 1200px; margin: 0 auto; }
+  .about-pillars { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
+  .pillar { background: var(--dark-2); border: 1px solid var(--border); padding: 28px 24px; border-radius: 2px; transition: border-color 0.3s; }
+  .pillar:hover { border-color: var(--gold); }
+  .pillar-icon { font-size: 24px; margin-bottom: 12px; }
+  .pillar-title { font-family: 'Bebas Neue', sans-serif; font-size: 20px; letter-spacing: 2px; margin-bottom: 8px; }
+  .pillar-text { font-size: 13px; color: var(--white-dim); line-height: 1.7; font-weight: 300; }
+
+  /* PRODUCTS */
+  #products { background: var(--black); }
+  .products-header { text-align: center; max-width: 600px; margin: 0 auto 70px; }
+  .products-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; max-width: 1200px; margin: 0 auto; }
+  .product-card { background: var(--dark-2); border: 1px solid var(--border); padding: 40px 32px; border-radius: 2px; position: relative; transition: all 0.3s; overflow: hidden; }
+  .product-card::before { content: ''; position: absolute; top: 0; left: 0; right: 0; height: 2px; background: var(--gold); transform: scaleX(0); transition: transform 0.3s; }
+  .product-card:hover::before { transform: scaleX(1); }
+  .product-card:hover { border-color: rgba(201,168,76,0.4); transform: translateY(-4px); box-shadow: 0 20px 60px rgba(0,0,0,0.4); }
+  .product-card.featured { border-color: var(--gold); background: linear-gradient(135deg, var(--dark-2) 0%, rgba(201,168,76,0.05) 100%); }
+  .product-card.featured::before { transform: scaleX(1); }
+  .featured-tag { position: absolute; top: 20px; right: 20px; background: var(--gold); color: var(--black); font-size: 10px; letter-spacing: 2px; text-transform: uppercase; padding: 4px 10px; font-weight: 600; border-radius: 2px; }
+  .product-icon { font-size: 32px; margin-bottom: 20px; }
+  .product-name { font-family: 'Bebas Neue', sans-serif; font-size: 28px; letter-spacing: 2px; margin-bottom: 8px; }
+  .product-price { font-family: 'Cormorant Garamond', serif; font-size: 36px; color: var(--gold); font-weight: 600; margin-bottom: 6px; }
+  .product-price-note { font-size: 11px; color: var(--white-dim); letter-spacing: 1px; text-transform: uppercase; margin-bottom: 24px; }
+  .product-divider { height: 1px; background: var(--border); margin-bottom: 24px; }
+  .product-features { list-style: none; margin-bottom: 32px; }
+  .product-features li { font-size: 13px; color: var(--white-dim); padding: 7px 0; border-bottom: 1px solid rgba(245,240,232,0.05); display: flex; align-items: flex-start; gap: 10px; line-height: 1.5; font-weight: 300; }
+  .product-features li::before { content: '—'; color: var(--gold); flex-shrink: 0; font-size: 12px; margin-top: 1px; }
+  .product-features li:last-child { border-bottom: none; }
+  .product-btn { display: block; text-align: center; padding: 14px; font-size: 12px; letter-spacing: 2px; text-transform: uppercase; font-weight: 600; text-decoration: none; border-radius: 2px; transition: all 0.2s; font-family: 'DM Sans', sans-serif; }
+  .product-btn.primary { background: var(--gold); color: var(--black); }
+  .product-btn.primary:hover { background: var(--gold-light); box-shadow: 0 4px 20px rgba(201,168,76,0.3); }
+  .product-btn.outline { border: 1px solid var(--border); color: var(--white-dim); }
+  .product-btn.outline:hover { border-color: var(--gold); color: var(--gold); }
+  .bundle-card { grid-column: 1 / -1; background: linear-gradient(135deg, var(--dark-3) 0%, rgba(201,168,76,0.08) 100%); border: 1px solid var(--gold); padding: 40px 48px; display: flex; align-items: center; justify-content: space-between; gap: 40px; border-radius: 2px; transition: all 0.3s; }
+  .bundle-card:hover { box-shadow: 0 20px 60px rgba(201,168,76,0.15); transform: translateY(-2px); }
+  .bundle-left { flex: 1; }
+  .bundle-right { text-align: right; flex-shrink: 0; }
+  .bundle-name { font-family: 'Bebas Neue', sans-serif; font-size: 36px; letter-spacing: 3px; margin-bottom: 8px; }
+  .bundle-desc { font-size: 14px; color: var(--white-dim); line-height: 1.7; max-width: 500px; font-weight: 300; }
+  .bundle-price { font-family: 'Cormorant Garamond', serif; font-size: 54px; color: var(--gold); font-weight: 600; line-height: 1; margin-bottom: 4px; }
+  .bundle-save { font-size: 12px; color: var(--gold); letter-spacing: 2px; text-transform: uppercase; margin-bottom: 20px; font-weight: 500; }
+  .courses-card { grid-column: 1 / -1; border: 1px dashed var(--border); padding: 50px; text-align: center; border-radius: 2px; }
+  .courses-title { font-family: 'Bebas Neue', sans-serif; font-size: 36px; letter-spacing: 3px; margin-bottom: 16px; color: var(--white-dim); }
+  .courses-list { display: flex; flex-wrap: wrap; gap: 10px; justify-content: center; margin-top: 20px; }
+  .course-tag { border: 1px solid var(--border); padding: 8px 16px; font-size: 12px; letter-spacing: 1px; text-transform: uppercase; color: var(--white-dim); border-radius: 2px; font-weight: 500; }
+
+  /* COMMUNITY */
+  #community { background: var(--dark); }
+  .community-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 16px; max-width: 1200px; margin: 60px auto 0; }
+  .comm-card { background: var(--dark-2); border: 1px solid var(--border); padding: 28px 24px; border-radius: 2px; transition: all 0.3s; text-decoration: none; display: block; }
+  .comm-card:hover { border-color: var(--gold); transform: translateY(-3px); }
+  .comm-platform { font-size: 11px; letter-spacing: 3px; text-transform: uppercase; color: var(--gold); font-weight: 500; margin-bottom: 8px; }
+  .comm-name { font-family: 'Bebas Neue', sans-serif; font-size: 22px; letter-spacing: 2px; color: var(--white); margin-bottom: 8px; }
+  .comm-desc { font-size: 13px; color: var(--white-dim); line-height: 1.6; font-weight: 300; margin-bottom: 16px; }
+  .comm-link { font-size: 11px; letter-spacing: 1px; text-transform: uppercase; color: var(--gold); font-weight: 500; display: flex; align-items: center; gap: 6px; }
+  .comm-link::after { content: '→'; }
+
+  /* HOW */
+  #how { background: var(--black); }
+  .how-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 80px; align-items: start; max-width: 1200px; margin: 0 auto; }
+  .steps { margin-top: 50px; }
+  .step { display: flex; gap: 24px; margin-bottom: 40px; padding-bottom: 40px; border-bottom: 1px solid var(--white-faint); }
+  .step:last-child { border-bottom: none; margin-bottom: 0; }
+  .step-num { font-family: 'Bebas Neue', sans-serif; font-size: 48px; color: var(--gold); line-height: 1; flex-shrink: 0; opacity: 0.6; letter-spacing: 2px; }
+  .step-title { font-family: 'Bebas Neue', sans-serif; font-size: 22px; letter-spacing: 2px; margin-bottom: 8px; }
+  .step-text { font-size: 14px; color: var(--white-dim); line-height: 1.8; font-weight: 300; }
+  .discussion-box { background: var(--dark-2); border: 1px solid var(--border); padding: 40px; border-radius: 2px; }
+  .discussion-title { font-family: 'Bebas Neue', sans-serif; font-size: 28px; letter-spacing: 2px; margin-bottom: 24px; }
+  .route { background: var(--dark-3); border: 1px solid var(--white-faint); padding: 20px 24px; margin-bottom: 12px; border-radius: 2px; transition: border-color 0.2s; }
+  .route:hover { border-color: var(--border); }
+  .route-num { font-size: 10px; letter-spacing: 3px; text-transform: uppercase; color: var(--gold); font-weight: 600; margin-bottom: 6px; }
+  .route-title { font-size: 15px; font-weight: 500; margin-bottom: 4px; }
+  .route-desc { font-size: 12px; color: var(--white-dim); line-height: 1.6; font-weight: 300; }
+
+  /* FAQ */
+  #faq { background: var(--dark); }
+  .faq-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; max-width: 1000px; margin: 60px auto 0; }
+  .faq-item { background: var(--dark-2); border: 1px solid var(--border); padding: 28px; border-radius: 2px; transition: border-color 0.2s; }
+  .faq-item:hover { border-color: rgba(201,168,76,0.5); }
+  .faq-q { font-size: 14px; font-weight: 500; margin-bottom: 10px; line-height: 1.5; display: flex; align-items: flex-start; gap: 10px; }
+  .faq-q::before { content: 'Q'; color: var(--gold); font-family: 'Bebas Neue', sans-serif; font-size: 18px; letter-spacing: 1px; flex-shrink: 0; line-height: 1.2; }
+  .faq-a { font-size: 13px; color: var(--white-dim); line-height: 1.8; font-weight: 300; padding-left: 24px; }
+
+  /* SCAM */
+  #scam { background: var(--black); padding: 80px 60px; }
+  .scam-box { max-width: 900px; margin: 0 auto; border: 1px solid rgba(255,80,80,0.3); background: rgba(255,80,80,0.04); padding: 48px; border-radius: 2px; text-align: center; }
+  .scam-title { font-family: 'Bebas Neue', sans-serif; font-size: 36px; letter-spacing: 3px; color: #FF5050; margin-bottom: 20px; }
+  .scam-text { font-size: 14px; color: var(--white-dim); line-height: 1.8; margin-bottom: 24px; font-weight: 300; }
+  .scam-rules { display: flex; flex-wrap: wrap; gap: 12px; justify-content: center; margin-top: 20px; }
+  .scam-rule { border: 1px solid rgba(255,80,80,0.3); padding: 10px 18px; font-size: 12px; letter-spacing: 1px; text-transform: uppercase; color: #FF8080; border-radius: 2px; font-weight: 500; }
+
+  /* CTA */
+  #cta { background: var(--dark); text-align: center; padding: 120px 60px; position: relative; overflow: hidden; }
+  .cta-glow { position: absolute; width: 600px; height: 600px; border-radius: 50%; background: radial-gradient(circle, rgba(201,168,76,0.07) 0%, transparent 70%); top: 50%; left: 50%; transform: translate(-50%, -50%); pointer-events: none; }
+  .cta-title { font-family: 'Bebas Neue', sans-serif; font-size: clamp(48px, 6vw, 96px); letter-spacing: 4px; line-height: 1; margin-bottom: 20px; position: relative; }
+  .cta-sub { font-size: 15px; color: var(--white-dim); max-width: 480px; margin: 0 auto 40px; line-height: 1.8; font-weight: 300; position: relative; }
+
+  /* FOOTER */
+  footer { background: var(--dark-2); border-top: 1px solid var(--border); padding: 60px; }
+  .footer-grid { display: grid; grid-template-columns: 1.5fr 1fr 1fr 1fr; gap: 48px; max-width: 1200px; margin: 0 auto 48px; }
+  .footer-brand { font-family: 'Bebas Neue', sans-serif; font-size: 28px; letter-spacing: 3px; margin-bottom: 16px; }
+  .footer-brand span { color: var(--gold); }
+  .footer-desc { font-size: 13px; color: var(--white-dim); line-height: 1.8; max-width: 260px; font-weight: 300; margin-bottom: 24px; }
+  .footer-heading { font-size: 11px; letter-spacing: 3px; text-transform: uppercase; color: var(--gold); font-weight: 500; margin-bottom: 20px; }
+  .footer-links { list-style: none; }
+  .footer-links li { margin-bottom: 10px; }
+  .footer-links a { color: var(--white-dim); text-decoration: none; font-size: 13px; font-weight: 300; transition: color 0.2s; }
+  .footer-links a:hover { color: var(--gold); }
+  .social-links { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 4px; }
+  .social-link { border: 1px solid var(--border); padding: 8px 14px; font-size: 11px; letter-spacing: 1px; text-transform: uppercase; color: var(--white-dim); text-decoration: none; border-radius: 2px; transition: all 0.2s; font-weight: 500; }
+  .social-link:hover { border-color: var(--gold); color: var(--gold); }
+  .footer-bottom { max-width: 1200px; margin: 0 auto; padding-top: 32px; border-top: 1px solid var(--border); display: flex; justify-content: space-between; align-items: center; font-size: 12px; color: var(--white-dim); font-weight: 300; }
+  .footer-disclaimer { font-size: 11px; color: rgba(245,240,232,0.3); max-width: 500px; text-align: right; line-height: 1.6; }
+
+  /* ANIMATIONS */
+  @keyframes fadeUp { from { opacity: 0; transform: translateY(24px); } to { opacity: 1; transform: translateY(0); } }
+  .reveal { opacity: 0; transform: translateY(30px); transition: opacity 0.7s ease, transform 0.7s ease; }
+  .reveal.visible { opacity: 1; transform: translateY(0); }
+
+  /* RESPONSIVE */
+  @media (max-width: 1024px) {
+    nav { padding: 20px 30px; } section { padding: 80px 30px; }
+    .products-grid { grid-template-columns: 1fr 1fr; }
+    .bundle-card { flex-direction: column; text-align: center; }
+    .bundle-right { text-align: center; }
+    .about-grid { grid-template-columns: 1fr; gap: 40px; }
+    .how-grid { grid-template-columns: 1fr; gap: 60px; }
+    .footer-grid { grid-template-columns: 1fr 1fr; }
+  }
+  @media (max-width: 768px) {
+    nav { padding: 16px 20px; } .nav-links { display: none; } .menu-toggle { display: flex; }
+    section { padding: 60px 20px; } #hero { padding: 100px 20px 60px; }
+    .hero-stats { gap: 30px; } .products-grid { grid-template-columns: 1fr; }
+    .faq-grid { grid-template-columns: 1fr; } .footer-grid { grid-template-columns: 1fr; gap: 40px; }
+    .footer-bottom { flex-direction: column; gap: 16px; text-align: center; }
+    .footer-disclaimer { text-align: center; } .about-pillars { grid-template-columns: 1fr; }
+    #scam { padding: 40px 20px; } .scam-box { padding: 32px 24px; }
+    #cta { padding: 80px 20px; } .bundle-card { padding: 32px 24px; }
+    .hero-buttons { flex-direction: column; align-items: center; }
+  }
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav id="navbar">
+  <a href="#" class="nav-logo">COGNITIVE<span>PIP</span></a>
+  <ul class="nav-links">
+    <li><a href="#about">About</a></li>
+    <li><a href="#products">Products</a></li>
+    <li><a href="#community">Community</a></li>
+    <li><a href="#how">How It Works</a></li>
+    <li><a href="#faq">FAQ</a></li>
+    <li><a href="#pay" class="nav-cta">Join Now</a></li>
+  </ul>
+  <div class="menu-toggle" onclick="toggleMenu()">
+    <span></span><span></span><span></span>
+  </div>
+</nav>
+
+<!-- HERO -->
+<section id="hero">
+  <div class="hero-grid"></div>
+  <div class="hero-glow"></div>
+  <div class="hero-content">
+    <div class="hero-badge">Forex Education & Trading Community — South Africa</div>
+    <h1 class="hero-title">COGNITIVE<span class="gold">PIP</span></h1>
+    <p class="hero-tagline">Trade. Learn. Grow.</p>
+    <p class="hero-sub">A structured forex education community built to take you from complete beginner to disciplined, consistent trader. Real knowledge. Real execution. Real results.</p>
+    <div class="hero-buttons">
+      <a href="https://chat.whatsapp.com/FXf8DsrHKW3LwDOQky8Dlj" target="_blank" class="btn-primary">Join Free Group</a>
+      <a href="#products" class="btn-outline">View Products</a>
+    </div>
+    <div class="hero-stats">
+      <div class="stat"><div class="stat-num">8</div><div class="stat-label">Courses Coming</div></div>
+      <div class="stat"><div class="stat-num">4</div><div class="stat-label">Community Groups</div></div>
+      <div class="stat"><div class="stat-num">R550</div><div class="stat-label">Starting From</div></div>
+      <div class="stat"><div class="stat-num">∞</div><div class="stat-label">Lifetime Access</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- ABOUT -->
+<section id="about">
+  <div class="about-grid">
+    <div class="reveal">
+      <p class="section-label">Who We Are</p>
+      <h2 class="section-title">BUILT FOR SERIOUS TRADERS</h2>
+      <p class="section-sub" style="margin-bottom:30px;">CognitivePip was built with one purpose — to create a structured environment where traders learn properly, execute with discipline and grow consistently. No shortcuts. No promises. No hype.</p>
+      <p class="section-sub">We are not FSCA registered. All content is for educational purposes only. We focus on skill, not just signals.</p>
+    </div>
+    <div class="about-pillars reveal">
+      <div class="pillar"><div class="pillar-icon">📐</div><div class="pillar-title">Structured Learning</div><div class="pillar-text">A clear roadmap from beginner to advanced — no guesswork, no random content.</div></div>
+      <div class="pillar"><div class="pillar-icon">⚡</div><div class="pillar-title">Practical Execution</div><div class="pillar-text">Real setups, real reasoning, real market application — not just theory.</div></div>
+      <div class="pillar"><div class="pillar-icon">🛡️</div><div class="pillar-title">Risk Discipline</div><div class="pillar-text">Risk management is at the core of everything we teach and execute.</div></div>
+      <div class="pillar"><div class="pillar-icon">🤝</div><div class="pillar-title">Real Mentorship</div><div class="pillar-text">Access to guidance, not just a signal feed. We build traders, not dependents.</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- PRODUCTS -->
+<section id="products">
+  <div class="products-header reveal">
+    <p class="section-label">What We Offer</p>
+    <h2 class="section-title">CHOOSE YOUR PATH</h2>
+    <p class="section-sub">Every product is standalone. Pick what suits your goals — or combine them for the complete experience.</p>
+  </div>
+  <div class="products-grid">
+    <div class="product-card reveal">
+      <div class="product-icon">🟢</div>
+      <div class="product-name">Free Group</div>
+      <div class="product-price">R0</div>
+      <div class="product-price-note">Always Free</div>
+      <div class="product-divider"></div>
+      <ul class="product-features">
+        <li>Selected trade setups</li>
+        <li>Weekly market bias & outlook</li>
+        <li>Basic technical analysis</li>
+        <li>Risk & discipline guidance</li>
+        <li>Weekly polls & quizzes</li>
+        <li>Market updates & announcements</li>
+      </ul>
+      <a href="https://chat.whatsapp.com/FXf8DsrHKW3LwDOQky8Dlj" target="_blank" class="product-btn outline">Join Free — WhatsApp</a>
+    </div>
+    <div class="product-card reveal">
+      <div class="product-icon">🎓</div>
+      <div class="product-name">Educational Hub</div>
+      <div class="product-price">R550</div>
+      <div class="product-price-note">Once-Off · Lifetime Access</div>
+      <div class="product-divider"></div>
+      <ul class="product-features">
+        <li>Beginner lessons — summarized</li>
+        <li>Intermediate lessons — summarized</li>
+        <li>Advanced lessons — summarized</li>
+        <li>Original PDFs & study materials</li>
+        <li>Video lessons per level</li>
+        <li>Weekly quizzes & chart training</li>
+      </ul>
+      <a href="https://payf.st/znm02" target="_blank" class="product-btn outline">Get Access — R550</a>
+    </div>
+    <div class="product-card featured reveal">
+      <div class="featured-tag">Most Popular</div>
+      <div class="product-icon">🏆</div>
+      <div class="product-name">VIP Group</div>
+      <div class="product-price">R650</div>
+      <div class="product-price-note">Once-Off · Lifetime Access</div>
+      <div class="product-divider"></div>
+      <ul class="product-features">
+        <li>Premium setups — Entry, SL & TP</li>
+        <li>Advanced execution guidance</li>
+        <li>Live event trading — NFP, CPI, FOMC</li>
+        <li>Detailed market breakdowns</li>
+        <li>Direct mentorship & support</li>
+        <li>Weekly performance recaps</li>
+        <li>Discussion Group access included</li>
+      </ul>
+      <a href="https://payf.st/bz6it" target="_blank" class="product-btn primary">Join VIP — R650</a>
+    </div>
+    <div class="bundle-card reveal">
+      <div class="bundle-left">
+        <div class="bundle-name">💡 VIP + HUB BUNDLE</div>
+        <p class="bundle-desc">The complete CognitivePip experience. Everything in VIP plus full Educational Hub access — structured learning and live execution in one package. Save R150.</p>
+      </div>
+      <div class="bundle-right">
+        <div class="bundle-price">R1,050</div>
+        <div class="bundle-save">Save R150 · Once-Off · Lifetime</div>
+        <a href="https://payf.st/gqzv7" target="_blank" class="product-btn primary" style="display:inline-block;min-width:180px;">Get Bundle — R1,050</a>
+      </div>
+    </div>
+    <div class="courses-card reveal">
+      <div class="courses-title">📚 FULL COURSES — COMING SOON</div>
+      <p style="font-size:14px;color:var(--white-dim);font-weight:300;max-width:560px;margin:0 auto;line-height:1.8;">Professionally recorded courses with detailed videos, original PDFs, module quizzes and a full structured roadmap. Each course is a standalone deep-dive.</p>
+      <div class="courses-list">
+        <span class="course-tag">Beginner</span><span class="course-tag">Intermediate</span><span class="course-tag">Advanced</span>
+        <span class="course-tag">Technical Analysis</span><span class="course-tag">Fundamental Analysis</span>
+        <span class="course-tag">SMC</span><span class="course-tag">ICT</span><span class="course-tag">CRT</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- COMMUNITY -->
+<section id="community">
+  <div style="text-align:center;max-width:600px;margin:0 auto;" class="reveal">
+    <p class="section-label">Find Us</p>
+    <h2 class="section-title">JOIN THE COMMUNITY</h2>
+    <p class="section-sub" style="margin:0 auto;">We're active across multiple platforms. Pick your preferred way to connect and stay updated.</p>
+  </div>
+  <div class="community-grid">
+
+    <a href="https://chat.whatsapp.com/FXf8DsrHKW3LwDOQky8Dlj" target="_blank" class="comm-card reveal">
+      <div class="comm-platform">WhatsApp</div>
+      <div class="comm-name">Free Group</div>
+      <div class="comm-desc">Selected setups, market bias, weekly polls, quizzes and educational content.</div>
+      <div class="comm-link">Join Now</div>
+    </a>
+
+    <a href="https://whatsapp.com/channel/0029VbBZmRvC6ZvhAvGB9b1G" target="_blank" class="comm-card reveal">
+      <div class="comm-platform">WhatsApp</div>
+      <div class="comm-name">Official Channel</div>
+      <div class="comm-desc">Market breakdowns, major event alerts and important announcements.</div>
+      <div class="comm-link">Follow Channel</div>
+    </a>
+
+    <a href="https://t.me/cognitivepipfreegroup" target="_blank" class="comm-card reveal">
+      <div class="comm-platform">Telegram</div>
+      <div class="comm-name">Free Group</div>
+      <div class="comm-desc">Structured signals, market updates and community content on Telegram.</div>
+      <div class="comm-link">Join Now</div>
+    </a>
+
+    <a href="https://t.me/cognitivepipchannel" target="_blank" class="comm-card reveal">
+      <div class="comm-platform">Telegram</div>
+      <div class="comm-name">Official Channel</div>
+      <div class="comm-desc">Broadcast channel for market intelligence and key announcements.</div>
+      <div class="comm-link">Follow Channel</div>
+    </a>
+
+    <a href="https://www.instagram.com/cognitivepips?igsh=d21zMHk1cXJrNGNo" target="_blank" class="comm-card reveal">
+      <div class="comm-platform">Instagram</div>
+      <div class="comm-name">@cognitivepips</div>
+      <div class="comm-desc">Chart analysis, trade insights and community highlights.</div>
+      <div class="comm-link">Follow Us</div>
+    </a>
+
+    <a href="https://www.facebook.com/share/1BEYV46zpE/" target="_blank" class="comm-card reveal">
+      <div class="comm-platform">Facebook</div>
+      <div class="comm-name">CognitivePip</div>
+      <div class="comm-desc">Educational content, market updates and community discussions.</div>
+      <div class="comm-link">Follow Us</div>
+    </a>
+
+    <a href="https://tiktok.com/@cognitivepip" target="_blank" class="comm-card reveal">
+      <div class="comm-platform">TikTok</div>
+      <div class="comm-name">@cognitivepip</div>
+      <div class="comm-desc">Short-form chart breakdowns, market bias and trading education.</div>
+      <div class="comm-link">Follow Us</div>
+    </a>
+
+    <a href="https://x.com/cognitivepip" target="_blank" class="comm-card reveal">
+      <div class="comm-platform">X (Twitter)</div>
+      <div class="comm-name">@cognitivepip</div>
+      <div class="comm-desc">Quick market takes, event alerts and trading insights.</div>
+      <div class="comm-link">Follow Us</div>
+    </a>
+
+  </div>
+</section>
+
+<!-- HOW IT WORKS -->
+<section id="how">
+  <div class="how-grid">
+    <div>
+      <div class="reveal">
+        <p class="section-label">The Process</p>
+        <h2 class="section-title">HOW IT WORKS</h2>
+        <p class="section-sub">A clear path from where you are to where you want to be.</p>
+      </div>
+      <div class="steps">
+        <div class="step reveal">
+          <div class="step-num">01</div>
+          <div><div class="step-title">Join the Free Group</div><div class="step-text">Start with zero commitment. Get a feel for the content, the analysis and the community before spending anything.</div></div>
+        </div>
+        <div class="step reveal">
+          <div class="step-num">02</div>
+          <div><div class="step-title">Choose Your Product</div><div class="step-text">Hub for learning. VIP for execution. Bundle for both. Pay once — access for life. No monthly fees, no renewals.</div></div>
+        </div>
+        <div class="step reveal">
+          <div class="step-num">03</div>
+          <div><div class="step-title">Learn & Apply</div><div class="step-text">Follow the structured roadmap, apply risk management and develop real trading discipline over time.</div></div>
+        </div>
+        <div class="step reveal">
+          <div class="step-num">04</div>
+          <div><div class="step-title">Go Deeper With Courses</div><div class="step-text">When you're ready, full courses take each topic to its deepest level — SMC, ICT, CRT and more.</div></div>
+        </div>
+      </div>
+    </div>
+    <div class="reveal">
+      <div class="discussion-box">
+        <div class="discussion-title">💬 DISCUSSION GROUP</div>
+        <p style="font-size:13px;color:var(--white-dim);margin-bottom:24px;line-height:1.8;font-weight:300;">A controlled environment for live trade discussions and in-depth market breakdowns. Two ways to qualify:</p>
+        <div class="route">
+          <div class="route-num">Route 01 — HFM Affiliate</div>
+          <div class="route-title">HFM Account Holders</div>
+          <div class="route-desc">Register or transfer your HFM account under Affiliate ID 30495650. Send proof to admin. Free access once verified.</div>
+        </div>
+        <div class="route">
+          <div class="route-num">Route 02 — VIP Members</div>
+          <div class="route-title">Active VIP Members</div>
+          <div class="route-desc">VIP members get automatic access. No broker account required. Send proof of VIP payment to admin.</div>
+        </div>
+        <p style="font-size:11px;color:var(--white-dim);margin-top:20px;letter-spacing:1px;text-transform:uppercase;font-weight:500;">Verified members only. No proof = No access.</p>
+        <a href="https://wa.me/message/JUWOMXRXEAVSD1" target="_blank" style="display:block;text-align:center;margin-top:20px;padding:12px;background:var(--gold);color:var(--black);text-decoration:none;font-size:12px;letter-spacing:2px;text-transform:uppercase;font-weight:600;border-radius:2px;">Contact Admin</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section id="faq">
+  <div style="text-align:center;max-width:500px;margin:0 auto 60px;" class="reveal">
+    <p class="section-label">Common Questions</p>
+    <h2 class="section-title">FAQ</h2>
+  </div>
+  <div class="faq-grid">
+    <div class="faq-item reveal"><div class="faq-q">Do you offer free signals?</div><div class="faq-a">Yes — limited setups are shared in the Free Group. For full guidance with precise Entry, SL and TP, VIP is recommended.</div></div>
+    <div class="faq-item reveal"><div class="faq-q">Are payments monthly?</div><div class="faq-a">No. All education product payments are once-off with lifetime access. No monthly fees or renewals.</div></div>
+    <div class="faq-item reveal"><div class="faq-q">What is the difference between the Hub and the courses?</div><div class="faq-a">The Hub covers Beginner, Intermediate and Advanced in structured summaries — your foundation. Full courses go deep on each topic. SMC, ICT, CRT, TA and FA are course-only.</div></div>
+    <div class="faq-item reveal"><div class="faq-q">Does VIP include the Hub?</div><div class="faq-a">No. VIP and the Hub are standalone products. The VIP + Hub Bundle at R1,050 gives you both with a saving of R150.</div></div>
+    <div class="faq-item reveal"><div class="faq-q">Can I join VIP for free?</div><div class="faq-a">Yes — refer 3 verified VIP members at standard price and your access is free. Contact admin for your referral tracking format.</div></div>
+    <div class="faq-item reveal"><div class="faq-q">Is profit guaranteed?</div><div class="faq-a">No. Trading involves risk. CognitivePip focuses on building skill, discipline and consistency — not making promises about returns.</div></div>
+    <div class="faq-item reveal"><div class="faq-q">I'm a complete beginner, can I join?</div><div class="faq-a">Yes. The Educational Hub and the upcoming Beginner Course are designed specifically for people starting from zero.</div></div>
+    <div class="faq-item reveal"><div class="faq-q">Do you run specials or discounts?</div><div class="faq-a">Yes — a few times per year tied to specific events. All specials are announced publicly with a hard deadline. Follow our channels to never miss one.</div></div>
+  </div>
+</section>
+
+<!-- SCAM ALERT -->
+<section id="scam">
+  <div class="scam-box">
+    <div class="scam-title">🚨 SCAM ALERT</div>
+    <p class="scam-text">There are individuals impersonating CognitivePip. Please stay alert and always verify before making any payment through official channels only.</p>
+    <div class="scam-rules">
+      <div class="scam-rule">Never message you first asking for payment</div>
+      <div class="scam-rule">Never use personal accounts</div>
+      <div class="scam-rule">Never promise guaranteed profits</div>
+      <div class="scam-rule">Never ask for passwords</div>
+    </div>
+    <p style="font-size:13px;color:var(--white-dim);margin-top:24px;font-weight:300;line-height:1.8;">If someone contacts you claiming to be CognitivePip — <strong style="color:var(--white);">ignore, block and report immediately.</strong><br>Verify directly through our official WhatsApp: <a href="https://wa.me/message/JUWOMXRXEAVSD1" style="color:var(--gold);">wa.me/message/JUWOMXRXEAVSD1</a></p>
+  </div>
+</section>
+
+<!-- PAYMENT LINKS SECTION -->
+<section id="pay" style="background:var(--dark);padding:80px 60px;">
+  <div style="text-align:center;max-width:700px;margin:0 auto;" class="reveal">
+    <p style="font-size:11px;letter-spacing:4px;text-transform:uppercase;color:var(--gold);font-weight:500;margin-bottom:16px;">Ready to Join</p>
+    <h2 style="font-family:'Bebas Neue',sans-serif;font-size:clamp(36px,5vw,60px);letter-spacing:3px;margin-bottom:16px;">PAY SECURELY ONLINE</h2>
+    <p style="font-size:15px;color:var(--white-dim);line-height:1.8;font-weight:300;margin-bottom:48px;">Click your product below. Pay instantly by card, EFT or SnapScan via PayFast — South Africa's trusted payment gateway. Lifetime access granted after payment.</p>
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:16px;margin-bottom:32px;">
+      <a href="https://payf.st/bz6it" target="_blank" style="display:block;background:var(--dark-3);border:1px solid var(--gold);padding:28px 20px;text-decoration:none;transition:all 0.2s;border-radius:2px;" onmouseover="this.style.transform='translateY(-3px)';this.style.boxShadow='0 10px 30px rgba(201,168,76,0.2)'" onmouseout="this.style.transform='none';this.style.boxShadow='none'">
+        <div style="font-size:24px;margin-bottom:10px;">🏆</div>
+        <div style="font-family:'Bebas Neue',sans-serif;font-size:22px;letter-spacing:2px;color:var(--white);margin-bottom:6px;">VIP GROUP</div>
+        <div style="font-family:'Cormorant Garamond',serif;font-size:32px;color:var(--gold);font-weight:600;margin-bottom:6px;">R650</div>
+        <div style="font-size:11px;letter-spacing:1px;text-transform:uppercase;color:var(--white-dim);">Once-Off · Lifetime</div>
+        <div style="margin-top:16px;background:var(--gold);color:var(--black);padding:10px;font-size:11px;letter-spacing:2px;font-weight:600;text-transform:uppercase;">Pay Now</div>
+      </a>
+      <a href="https://payf.st/znm02" target="_blank" style="display:block;background:var(--dark-3);border:1px solid var(--border);padding:28px 20px;text-decoration:none;transition:all 0.2s;border-radius:2px;" onmouseover="this.style.transform='translateY(-3px)';this.style.borderColor='var(--gold)'" onmouseout="this.style.transform='none';this.style.borderColor='rgba(201,168,76,0.2)'">
+        <div style="font-size:24px;margin-bottom:10px;">🎓</div>
+        <div style="font-family:'Bebas Neue',sans-serif;font-size:22px;letter-spacing:2px;color:var(--white);margin-bottom:6px;">EDUCATIONAL HUB</div>
+        <div style="font-family:'Cormorant Garamond',serif;font-size:32px;color:var(--gold);font-weight:600;margin-bottom:6px;">R550</div>
+        <div style="font-size:11px;letter-spacing:1px;text-transform:uppercase;color:var(--white-dim);">Once-Off · Lifetime</div>
+        <div style="margin-top:16px;background:transparent;border:1px solid var(--gold);color:var(--gold);padding:10px;font-size:11px;letter-spacing:2px;font-weight:600;text-transform:uppercase;">Pay Now</div>
+      </a>
+      <a href="https://payf.st/gqzv7" target="_blank" style="display:block;background:linear-gradient(135deg,var(--dark-3) 0%,rgba(201,168,76,0.06) 100%);border:1px solid var(--gold);padding:28px 20px;text-decoration:none;transition:all 0.2s;border-radius:2px;position:relative;" onmouseover="this.style.transform='translateY(-3px)';this.style.boxShadow='0 10px 30px rgba(201,168,76,0.2)'" onmouseout="this.style.transform='none';this.style.boxShadow='none'">
+        <div style="position:absolute;top:12px;right:12px;background:var(--gold);color:var(--black);font-size:9px;letter-spacing:2px;font-weight:700;padding:3px 8px;text-transform:uppercase;">Best Value</div>
+        <div style="font-size:24px;margin-bottom:10px;">💡</div>
+        <div style="font-family:'Bebas Neue',sans-serif;font-size:22px;letter-spacing:2px;color:var(--white);margin-bottom:6px;">VIP + HUB BUNDLE</div>
+        <div style="font-family:'Cormorant Garamond',serif;font-size:32px;color:var(--gold);font-weight:600;margin-bottom:2px;">R1,050</div>
+        <div style="font-size:11px;color:var(--gold);margin-bottom:4px;">Save R150</div>
+        <div style="font-size:11px;letter-spacing:1px;text-transform:uppercase;color:var(--white-dim);">Once-Off · Lifetime</div>
+        <div style="margin-top:16px;background:var(--gold);color:var(--black);padding:10px;font-size:11px;letter-spacing:2px;font-weight:600;text-transform:uppercase;">Pay Now</div>
+      </a>
+    </div>
+    <p style="font-size:12px;color:rgba(245,240,232,0.35);line-height:1.7;">Payments processed securely by PayFast. Accepts Visa, Mastercard, Instant EFT, SnapScan &amp; more.<br>After payment, send proof to admin on WhatsApp or Telegram for group access.</p>
+    <div style="margin-top:20px;">
+      <a href="https://wa.me/message/JUWOMXRXEAVSD1" target="_blank" style="display:inline-block;border:1px solid var(--border);color:var(--white-dim);padding:10px 24px;font-size:12px;letter-spacing:1px;text-decoration:none;margin:6px;">WhatsApp Admin</a>
+      <a href="https://t.me/cognitivepip" target="_blank" style="display:inline-block;border:1px solid var(--border);color:var(--white-dim);padding:10px 24px;font-size:12px;letter-spacing:1px;text-decoration:none;margin:6px;">Telegram Admin</a>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section id="cta">
+  <div class="cta-glow"></div>
+  <div class="reveal" style="position:relative;">
+    <p class="section-label" style="text-align:center;">Start Today</p>
+    <h2 class="cta-title">READY TO<br><span style="color:var(--gold)">TRADE SMART?</span></h2>
+    <p class="cta-sub">Join the free group first. See what we're about. When you're ready — upgrade. No pressure, no spam, no promises.</p>
+    <div style="display:flex;gap:16px;justify-content:center;flex-wrap:wrap;">
+      <a href="https://chat.whatsapp.com/FXf8DsrHKW3LwDOQky8Dlj" target="_blank" class="btn-primary">Join Free — WhatsApp</a>
+      <a href="https://t.me/cognitivepipfreegroup" target="_blank" class="btn-outline">Join Free — Telegram</a>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer id="contact">
+  <div class="footer-grid">
+    <div>
+      <div class="footer-brand">COGNITIVE<span>PIP</span></div>
+      <p class="footer-desc">A structured forex education and trading community. Building real traders through real knowledge, real discipline and real execution.</p>
+      <div class="social-links">
+        <a href="https://tiktok.com/@cognitivepip" target="_blank" class="social-link">TikTok</a>
+        <a href="https://www.instagram.com/cognitivepips?igsh=d21zMHk1cXJrNGNo" target="_blank" class="social-link">Instagram</a>
+        <a href="https://www.facebook.com/share/1BEYV46zpE/" target="_blank" class="social-link">Facebook</a>
+        <a href="https://x.com/cognitivepip" target="_blank" class="social-link">X</a>
+        <a href="mailto:cognitivepips@gmail.com" class="social-link">Email</a>
+      </div>
+    </div>
+    <div>
+      <div class="footer-heading">WhatsApp</div>
+      <ul class="footer-links">
+        <li><a href="https://chat.whatsapp.com/FXf8DsrHKW3LwDOQky8Dlj" target="_blank">Free Group</a></li>
+        <li><a href="https://whatsapp.com/channel/0029VbBZmRvC6ZvhAvGB9b1G" target="_blank">Official Channel</a></li>
+        <li><a href="https://wa.me/message/JUWOMXRXEAVSD1" target="_blank">Direct Chat</a></li>
+      </ul>
+      <div class="footer-heading" style="margin-top:24px;">Telegram</div>
+      <ul class="footer-links">
+        <li><a href="https://t.me/cognitivepipfreegroup" target="_blank">Free Group</a></li>
+        <li><a href="https://t.me/cognitivepipchannel" target="_blank">Official Channel</a></li>
+        <li><a href="https://t.me/cognitivepip" target="_blank">Direct Chat</a></li>
+      </ul>
+    </div>
+    <div>
+      <div class="footer-heading">Products</div>
+      <ul class="footer-links">
+        <li><a href="https://chat.whatsapp.com/FXf8DsrHKW3LwDOQky8Dlj" target="_blank">Free Group</a></li>
+        <li><a href="https://payf.st/znm02" target="_blank">Educational Hub — R550</a></li>
+        <li><a href="https://payf.st/bz6it" target="_blank">VIP Group — R650</a></li>
+        <li><a href="https://payf.st/gqzv7" target="_blank">VIP + Hub Bundle — R1,050</a></li>
+        <li><a href="#products">Courses — Coming Soon</a></li>
+      </ul>
+    </div>
+    <div>
+      <div class="footer-heading">Contact Admin</div>
+      <ul class="footer-links">
+        <li><a href="https://wa.me/message/JUWOMXRXEAVSD1" target="_blank">WhatsApp Admin</a></li>
+        <li><a href="https://t.me/cognitivepip" target="_blank">Telegram Admin</a></li>
+        <li><a href="mailto:cognitivepips@gmail.com">cognitivepips@gmail.com</a></li>
+      </ul>
+      <div class="footer-heading" style="margin-top:24px;">Admin Keywords</div>
+      <ul class="footer-links">
+        <li><a href="https://wa.me/message/JUWOMXRXEAVSD1" target="_blank">PAYMENTS — Payment details</a></li>
+        <li><a href="https://wa.me/message/JUWOMXRXEAVSD1" target="_blank">FAQ — All answers</a></li>
+        <li><a href="https://wa.me/message/JUWOMXRXEAVSD1" target="_blank">REFERRAL — Earn VIP free</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <div>© 2025 CognitivePip™ All rights reserved.</div>
+    <div class="footer-disclaimer">Educational content only. Not financial advice. CognitivePip is not registered with the FSCA. Trading involves significant risk. Members trade at their own risk and are solely responsible for their decisions.</div>
+  </div>
+</footer>
+
+<script>
+  const reveals = document.querySelectorAll('.reveal');
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach((entry, i) => {
+      if (entry.isIntersecting) {
+        setTimeout(() => entry.target.classList.add('visible'), i * 80);
+        observer.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.1 });
+  reveals.forEach(el => observer.observe(el));
+
+  window.addEventListener('scroll', () => {
+    const nav = document.getElementById('navbar');
+    nav.style.padding = window.scrollY > 60 ? '14px 60px' : '20px 60px';
+  });
+
+  function toggleMenu() {
+    const links = document.querySelector('.nav-links');
+    if (links.style.display === 'flex') {
+      links.style.display = 'none';
+    } else {
+      links.style.cssText = 'display:flex;flex-direction:column;position:absolute;top:65px;left:0;right:0;background:rgba(8,8,8,0.98);padding:20px 30px;gap:20px;border-bottom:1px solid rgba(201,168,76,0.2);z-index:99;';
+    }
+  }
+</script>
+</body>
+</html>
